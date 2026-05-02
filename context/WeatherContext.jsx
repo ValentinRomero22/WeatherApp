@@ -8,6 +8,7 @@ const WeatherContext = createContext()
 
 export const WeatherProvider = ({ children }) => {
     const [location, setLocation] = useState('Montevideo')
+    const [timezone, setTimezone] = useState(null)
     const [language, setLanguage] = useState('es')
 
     const [weatherData, setWeatherData] = useState(null)
@@ -15,11 +16,12 @@ export const WeatherProvider = ({ children }) => {
     const [error, setError] = useState(null)
 
     const getCurrentLocation = async () => {
-        const loc = await getLocation()
-        setLocation(loc)
+        const locationData = await getLocation()
+        setLocation(locationData.location)
+        setTimezone(locationData.timezone)
     }
 
-    const fetchWeatherData = async (location, language) => {
+    const fetchWeatherData = async (location, timezone, language) => {
         try {
             setLoadingWeather(true)
 
@@ -49,6 +51,7 @@ export const WeatherProvider = ({ children }) => {
                 loadingWeather,
                 error,
                 location,
+                timezone,
                 language,
                 setLocation
             }}>

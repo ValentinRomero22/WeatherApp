@@ -19,8 +19,20 @@ import { useWeather } from '../../context/WeatherContext'
 
 import { DetailsWeatherItem } from './DetailsWeatherItem'
 
-export const DetailsWeatherContainer = () => {
-    const { weatherData } = useWeather()
+export const DetailsWeatherContainer = ({ item }) => {
+    /* const { weatherData } = useWeather() */
+
+    /* const { windChill,
+        uvIndex,
+        wind,
+        sunData,
+        rain,
+        visibility,
+        humidity,
+        moon,
+        average,
+        pressure
+    } = weatherData.generalData */
 
     const { windChill,
         uvIndex,
@@ -32,7 +44,7 @@ export const DetailsWeatherContainer = () => {
         moon,
         average,
         pressure
-    } = weatherData.generalData
+    } = item.generalData
 
     return (
         <View style={styles.container}>

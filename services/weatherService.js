@@ -25,10 +25,10 @@ export const getWeatherData = async (location, language) => {
 
     const locationData = {
         city: data.location.name,
-        temperature: Math.round(data.current.temp_c),
+        temperature: `${Math.round(data.current.temp_c)}°`,
         condition: data.current.condition.text,
-        maxTemp: Math.round(data.forecast.forecastday[0].day.maxtemp_c),
-        minTemp: Math.round(data.forecast.forecastday[0].day.mintemp_c)
+        maxTemp: `${Math.round(data.forecast.forecastday[0].day.maxtemp_c)}°`,
+        minTemp: `${Math.round(data.forecast.forecastday[0].day.mintemp_c)}°`
     }
 
     const { hourlyForecast, isDay } = getHourlyWeatherData(data, currentDate)

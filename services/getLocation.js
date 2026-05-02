@@ -1,4 +1,5 @@
 import * as Location from 'expo-location'
+import * as Localization from 'expo-localization'
 
 import { getLocationPermissions } from "../helpers/getPermission"
 
@@ -11,5 +12,7 @@ export const getLocation = async () => {
         accuracy: Location.Accuracy.High
     })
 
-    return location
+    const timezone = Localization.getCalendars()[0].timeZone
+
+    return { location, timezone }
 }

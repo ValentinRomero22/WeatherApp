@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 import { AppContainer } from './src/components/AppContainer'
+import { AppContainerRender } from './src/components/AppContainerRender'
 import { WeatherProvider } from './context/WeatherContext'
 
 export default function App() {
@@ -12,7 +13,8 @@ export default function App() {
             <SafeAreaProvider>
                 <View style={styles.container}>
                     <StatusBar style="auto" />
-                    <AppContainer />
+                    {/* <AppContainer /> */}
+                    <AppContainerRender />
                 </View>
             </SafeAreaProvider>
         </WeatherProvider>
