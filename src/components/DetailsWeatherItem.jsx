@@ -59,10 +59,11 @@ const styles = StyleSheet.create({
     item: {
         /* backgroundColor: 'rgba(255,255,255,0.12)', */
         backgroundColor: 'rgba(255, 255, 255, 0.3)',
-        borderRadius: 16,
         padding: 10,
         justifyContent: 'space-between',
-        height: 180
+        height: 180,
+        borderBottomLeftRadius: 16,
+        borderBottomRightRadius: 16,
     },
     titleContainer: {
         height: '15%',

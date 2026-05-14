@@ -13,7 +13,6 @@ export default function App() {
             <SafeAreaProvider>
                 <View style={styles.container}>
                     <StatusBar style="auto" />
-                    {/* <AppContainer /> */}
                     <AppContainerRender />
                 </View>
             </SafeAreaProvider>
@@ -24,9 +23,9 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: 20,
         backgroundColor: '#54abf3',
+        /* paddingHorizontal: 20,
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center', */
     },
 })

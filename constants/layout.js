@@ -1,0 +1,5 @@
+export const HERO_FULL_HEIGHT = 200
+
+export const HERO_MIN_HIGHT = 90
+
+export const HERO_COLLAPSE_RANGE = HERO_FULL_HEIGHT - HERO_MIN_HIGHT
