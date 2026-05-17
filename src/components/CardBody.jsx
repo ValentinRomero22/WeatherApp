@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 16,
         borderBottomRightRadius: 16,
         overflow: 'hidden',
-        width: '100%'
+        width: '100%',
+        paddingBottom: 10
     },
     tint: {
         backgroundColor: 'rgba(28, 46, 74, 0.13)',

@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 16,
         borderTopRightRadius: 16,
         overflow: 'hidden',
-        marginTop: 10
+        /* marginTop: 10 */
     },
     halfWidth: {
         width: '50%'
